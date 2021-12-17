@@ -1,10 +1,18 @@
 import React from "react";
 import logo from "./logo.svg";
-import LandingPage from "./pages/LandingPage";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import LandingPage from "./pages/LandingPage";
+import Layout from "./components/Layout";
 
 function App() {
-  return <LandingPage />;
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Layout>
+  );
 }
 
 export default App;
